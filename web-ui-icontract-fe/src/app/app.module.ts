@@ -10,12 +10,13 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatMenuModule,
-  MatToolbarModule
+  MatToolbarModule, MatRadioModule,MatDatepickerModule,MatNativeDateModule
 } from "@angular/material";
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContractViewComponent } from './modules/contracts/views/contract-view/contract-view.component';
 import { ContractApprovalComponent } from './modules/contracts/components/contract-approval/contract-approval.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContractApprovalComponent } from './modules/contracts/components/contra
     LoginComponent,
     DashboardComponent,
     ContractViewComponent,
-    ContractApprovalComponent
+    ContractApprovalComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,9 @@ import { ContractApprovalComponent } from './modules/contracts/components/contra
     MatToolbarModule,
     MatMenuModule,
     MatFormFieldModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatButtonModule,
   ],
   providers: [],
