@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {LoginComponent} from "./login/login.component";
+import {LoginComponent} from "./auth/login/login.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {ContractViewComponent} from "./modules/contracts/views/contract-view/contract-view.component";
-import {RegisterComponent} from "./register/register.component";
+import {RegisterComponent} from "./auth/register/register.component";
 
 
 
