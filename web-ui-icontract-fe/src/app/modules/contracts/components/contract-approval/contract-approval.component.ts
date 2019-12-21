@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {UploadService} from "../contract-uploads/upload.service";
+import {MatDialog} from "@angular/material";
+import {DailogComponent} from "../contract-uploads/dailog/dailog.component";
 
 @Component({
   selector: 'app-contract-approval',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContractApprovalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog, public uploadService: UploadService) {}
 
-  ngOnInit() {
+  public openUploadDialog() {
+    let dialogRef = this.dialog.open(DailogComponent, {
+      width: '50%',
+      height: '50%',
+    })
   }
 
+  ngOnInit(): void {
+  }
 }

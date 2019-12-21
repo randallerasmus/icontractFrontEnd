@@ -10,13 +10,19 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatMenuModule,
-  MatToolbarModule, MatRadioModule,MatDatepickerModule,MatNativeDateModule
+  MatToolbarModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatInputModule
 } from "@angular/material";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContractViewComponent } from './modules/contracts/views/contract-view/contract-view.component';
 import { ContractApprovalComponent } from './modules/contracts/components/contract-approval/contract-approval.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent } from './auth/register/register.component';
+import {AngularFireAuthModule} from "@angular/fire/auth";
+import {AngularFireModule} from "@angular/fire";
+import {environment} from "../environments/environment";
+import {AngularFirestore, AngularFirestoreModule} from "@angular/fire/firestore";
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -36,12 +42,18 @@ import { RegisterComponent } from './register/register.component';
     MatToolbarModule,
     MatMenuModule,
     MatFormFieldModule,
+    MatInputModule,
     MatRadioModule,
+    FormsModule,
     MatDatepickerModule,
+    HttpClientModule,
     MatNativeDateModule,
     MatButtonModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

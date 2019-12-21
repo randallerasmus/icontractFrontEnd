@@ -1,19 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material';
+import { DailogComponent } from './dailog/dailog.component';
 import {HttpClient} from "@angular/common/http";
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-contract-uploads',
+  templateUrl: './contract-uploads.component.html',
+  styleUrls: ['./contract-uploads.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class ContractUploadsComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(public dialog: MatDialog, private http: HttpClient) { }
 
   ngOnInit() {
   }
 
-  upload(files: File[]) {
+  public openUploadDialog(files: File[]) {
     this.basicUpload(files);
   }
 
@@ -25,4 +27,5 @@ export class DashboardComponent implements OnInit {
         console.log('done')
       })
   }
+
 }
