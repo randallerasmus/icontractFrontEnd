@@ -10,7 +10,13 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatMenuModule,
-  MatToolbarModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule, MatInputModule
+  MatToolbarModule,
+  MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatInputModule,
+  MatTableModule,
+  MatSortable, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule, MatDividerModule
 } from "@angular/material";
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -23,6 +29,7 @@ import {environment} from "../environments/environment";
 import {AngularFirestore, AngularFirestoreModule} from "@angular/fire/firestore";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import { CdkTableModule} from '@angular/cdk/table';
 
 @NgModule({
   declarations: [
@@ -43,6 +50,13 @@ import {FormsModule} from "@angular/forms";
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatDividerModule,
+    MatSortModule,
+    CdkTableModule,
+    BrowserAnimationsModule,
     MatRadioModule,
     FormsModule,
     MatDatepickerModule,
