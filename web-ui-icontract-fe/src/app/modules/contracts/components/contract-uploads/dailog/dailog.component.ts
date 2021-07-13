@@ -9,7 +9,7 @@ import {forkJoin} from "rxjs";
   styleUrls: ['./dailog.component.scss']
 })
 export class DailogComponent implements OnInit {
-  @ViewChild('file', { static: false }) file;
+  @ViewChild('file') file;
 
   public files: Set<File> = new Set();
 
