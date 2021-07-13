@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UploadService} from "../contract-uploads/upload.service";
-import {MatDialog} from "@angular/material";
+import { MatDialog } from "@angular/material/dialog";
 import {DailogComponent} from "../contract-uploads/dailog/dailog.component";
 
 @Component({

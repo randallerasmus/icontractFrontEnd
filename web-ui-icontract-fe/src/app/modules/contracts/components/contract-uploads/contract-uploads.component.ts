@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { DailogComponent } from './dailog/dailog.component';
 import {HttpClient} from "@angular/common/http";
 
