@@ -28,8 +28,9 @@ import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
 import {AngularFirestore, AngularFirestoreModule} from "@angular/fire/firestore";
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CdkTableModule} from '@angular/cdk/table';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { CdkTableModule} from '@angular/cdk/table';
     MatProgressSpinnerModule,
     MatDividerModule,
     MatSortModule,
+    MatSidenavModule,
     CdkTableModule,
     BrowserAnimationsModule,
     MatRadioModule,
@@ -65,7 +67,8 @@ import { CdkTableModule} from '@angular/cdk/table';
     MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
