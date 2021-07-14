@@ -31,13 +31,18 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  SignIn(user) {
-    console.log(user);
+  signIn(user) {
+    console.log('SignIn')
     this.auth.login(user.value.email, user.value.password);
     this.router.navigate(['/dashboard']);
   }
 
-  Logout() {
+  register(user){
+    console.log('register')
+  }
+
+  logout() {
+    console.log('logout')
     this.auth.logout();
   }
 }

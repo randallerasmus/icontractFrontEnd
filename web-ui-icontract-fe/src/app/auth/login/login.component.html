@@ -7,17 +7,17 @@
         </div>
       </div>
     <div class="loginForm-box">
-      <h1>iContract</h1>
+      <h1>Status-Hero</h1>
       <div class="textbox">
         <i class="fas fa-user"></i>
-        <input type="text" placeholder="Username" name="" value="">
+        <input type="email" placeholder="Username" name="email" value="" ngModel="email">
       </div>
       <div class="textbox">
         <i class="fas fa-lock"></i>
-        <input type="password" placeholder="Password" name="" value="">
+        <input type="password" placeholder="Password" name="password" value="">
       </div>
-      <input class="btn" (click)="SignIn(user)" type="button" name="" value="Sign In">
-      <input class="btn" type="button" name="" routerLink="/register" value="Register">
+      <input class="btn" (click)="signIn(user)" routerLink="/dashboard" type="button" name="" value="Sign In">
+      <input class="btn" (click)="register(user)" type="button" name="" routerLink="/register" value="Register">
     </div>
     </div>
   </mat-card-content>

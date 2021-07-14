@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialogRef} from "@angular/material";
+import { MatDialogRef } from "@angular/material/dialog";
 import {UploadService} from "../upload.service";
 import {forkJoin} from "rxjs";
 
@@ -9,7 +9,7 @@ import {forkJoin} from "rxjs";
   styleUrls: ['./dailog.component.scss']
 })
 export class DailogComponent implements OnInit {
-  @ViewChild('file', { static: false }) file;
+  @ViewChild('file') file;
 
   public files: Set<File> = new Set();
 

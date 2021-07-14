@@ -4,20 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  MatButtonModule,
-  MatCardModule,
-  MatFormFieldModule,
-  MatIconModule,
-  MatMenuModule,
-  MatToolbarModule,
-  MatRadioModule,
-  MatDatepickerModule,
-  MatNativeDateModule,
-  MatInputModule,
-  MatTableModule,
-  MatSortable, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule, MatDividerModule
-} from "@angular/material";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatNativeDateModule } from "@angular/material/core";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatDividerModule } from "@angular/material/divider";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatIconModule } from "@angular/material/icon";
+import { MatInputModule } from "@angular/material/input";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatSortable, MatSortModule } from "@angular/material/sort";
+import { MatTableModule } from "@angular/material/table";
+import { MatToolbarModule } from "@angular/material/toolbar";
 import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContractViewComponent } from './modules/contracts/views/contract-view/contract-view.component';
@@ -28,8 +29,11 @@ import {AngularFireModule} from "@angular/fire";
 import {environment} from "../environments/environment";
 import {AngularFirestore, AngularFirestoreModule} from "@angular/fire/firestore";
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CdkTableModule} from '@angular/cdk/table';
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -50,11 +54,14 @@ import { CdkTableModule} from '@angular/cdk/table';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
+    MatProgressBarModule,
+    MatDialogModule,
     MatTableModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatDividerModule,
     MatSortModule,
+    MatSidenavModule,
     CdkTableModule,
     BrowserAnimationsModule,
     MatRadioModule,
@@ -65,7 +72,8 @@ import { CdkTableModule} from '@angular/cdk/table';
     MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
