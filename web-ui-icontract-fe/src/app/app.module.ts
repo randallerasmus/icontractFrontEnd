@@ -32,6 +32,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CdkTableModule} from '@angular/cdk/table';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
+    MatProgressBarModule,
+    MatDialogModule,
     MatTableModule,
     MatPaginatorModule,
     MatProgressSpinnerModule,
